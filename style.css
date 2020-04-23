@@ -42,7 +42,7 @@ body {
 
 input[type="number"] {
 	/* display: block; */
-	width: 50%;
+	width: 80%;
 	height: 2rem;
 	padding: 0.5rem;
 	font-size: 1rem;
