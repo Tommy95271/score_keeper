@@ -1,0 +1,74 @@
+:root {
+	font-size: 16px;
+}
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Noto Sans TC', sans-serif;
+}
+body {
+	text-align: center;
+	/* padding: 10% 20%; */
+	margin: 10vh 0;
+	height: 50vh;
+	font-size: 3rem;
+}
+
+.winner {
+	color: hsl(180, 30%, 70%);
+}
+
+.congratulation {
+	color: hsl(192, 76%, 50%);
+	transition: 1s;
+	opacity: 0;
+	height: 0;
+}
+
+.appear {
+	opacity: 1;
+	height: 100%;
+}
+
+#main {
+	border-top: 1px solid pink;
+	margin: 10%;
+}
+
+#displayScore {
+	color: hsl(217, 84%, 36%);
+}
+
+input[type="number"] {
+	/* display: block; */
+	width: 50%;
+	height: 2rem;
+	padding: 0.5rem;
+	font-size: 1rem;
+	font-weight: 700;
+	border: 2px solid hsl(189, 75%, 54%);
+	border-radius: 3rem;
+	outline: none;
+}
+#btns {
+	display: block;
+}
+
+.btn {
+	width: 30%;
+	padding: 5px;
+	font-size: 1.5rem;
+	outline: none;
+	border: none;
+	border-radius: 3rem;
+}
+.btn:active {
+	color: hsl(240, 50%, 70%);
+}
+
+@media screen and (min-width: 960px) {
+	#main {
+		margin: 5% 30%;
+	}
+}
