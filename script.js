@@ -16,6 +16,8 @@ $(function() {
 
 	function scoreAdder(pScore, pDisplay) {
 		return function() {
+			console.log(p1Score);
+			console.log(p2Score);
 			if (!gameOver) {
 				pScore++;
 				pDisplay = pDisplay.text(pScore);
