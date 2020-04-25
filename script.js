@@ -23,11 +23,16 @@ $(function() {
 				pDisplay.addClass('winner');
 				gameOver = !gameOver;
 				animatedBounce(pDisplay);
+			} else {
+				console.log(456);
 			}
 		}
 	}
+	function xxx(params) {
+		console.log(12);
+	}
 
-	p1Btn.on('click', scoreAdder(p1Score, p1Display));
+	p1Btn.on('click', xxx());
 	p2Btn.on('click', function() {
 		if (!gameOver) {
 			p2Score++;
