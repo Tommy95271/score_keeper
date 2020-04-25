@@ -55,7 +55,7 @@ $(function() {
 		if (gameOver) {
 			gameOver = !gameOver;
 		}
-		numInput.val('');
+		// numInput.val('');
 	}
 	resetBtn.on('click', function() {
 		reset();
