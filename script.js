@@ -12,6 +12,18 @@ $(function() {
 	var gameOver = false;
 	var con = $('.congratulation');
 
+	function scoreAdder(pScore, pDisplay) {
+		if (!gameOver) {
+			pScore++;
+			pDisplay = pDisplay.text(pScore);
+			if (pScore === winningScore) {
+				pDisplay.addClass('winner');
+				gameOver = !gameOver;
+				animatedBounce(pDisplay);
+			}
+		}
+	}
+
 	p1Btn.on('click', function() {
 		if (!gameOver) {
 			p1Score++;
