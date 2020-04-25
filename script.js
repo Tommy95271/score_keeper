@@ -14,6 +14,7 @@ $(function() {
 	var con = $('.congratulation');
 	var main = $('#main');
 
+	// there's still something wrong
 	function scoreAdder(pScore, pDisplay) {
 		return function() {
 			console.log(pScore);
@@ -63,5 +64,6 @@ $(function() {
 		displayScore.text(numInput.val());
 		winningScore = Number(numInput.val());
 		reset();
+		scoreAdder.scoreReset();
 	});
 });
