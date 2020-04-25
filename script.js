@@ -7,7 +7,7 @@ $(function() {
 	var p1Score = 0;
 	var p2Score = 0;
 	var p1Display = $('#p1Display');
-	var p2Display = $('#p1Display');
+	var p2Display = $('#p2Display');
 	var winningScore = 5;
 	var gameOver = false;
 	var con = $('.congratulation');
