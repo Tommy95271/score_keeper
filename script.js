@@ -27,7 +27,7 @@ $(function() {
 			}
 		};
 	}
-
+	// bug
 	p1Btn.on('click', scoreAdder(p1Score, p1Display));
 	p2Btn.on('click', function() {
 		if (!gameOver) {
