@@ -12,13 +12,10 @@ $(function() {
 	var gameOver = false;
 	var con = $('.congratulation');
 
-	// var p1Display = $('#p1Display').text();
-	// var p2Display = $('#p2Display').text();
 	p1Btn.on('click', function() {
-		// console.log(p1Display, p1Score);
 		if (!gameOver) {
 			p1Score++;
-			p1Display = $('#p1Display').text(p1Score);
+			p1Display = p1Display.text(p1Score);
 			if (p1Score === winningScore) {
 				p1Display.addClass('winner');
 				gameOver = !gameOver;
@@ -29,7 +26,7 @@ $(function() {
 	p2Btn.on('click', function() {
 		if (!gameOver) {
 			p2Score++;
-			p2Display = $('#p2Display').text(p2Score);
+			p2Display = p2Display.text(p2Score);
 			if (p2Score === winningScore) {
 				p2Display.addClass('winner');
 				gameOver = !gameOver;
