@@ -15,24 +15,26 @@ $(function() {
 	var main = $('#main');
 
 	function scoreAdder(pScore, pDisplay) {
-		if (!gameOver) {
-			pScore++;
-			pDisplay = pDisplay.text(pScore);
-			if (pScore === winningScore) {
-				console.log(123);
-				pDisplay.addClass('winner');
-				gameOver = !gameOver;
-				animatedBounce(pDisplay);
-			} else {
-				console.log(456);
+		return function() {
+			if (!gameOver) {
+				pScore++;
+				pDisplay = pDisplay.text(pScore);
+				if (pScore === winningScore) {
+					console.log(123);
+					pDisplay.addClass('winner');
+					gameOver = !gameOver;
+					animatedBounce(pDisplay);
+				} else {
+					console.log(456);
+				}
 			}
-		}
+		};
 	}
 	function xxx(params) {
 		console.log(12);
 	}
 
-	p1Btn.on('click', xxx);
+	p1Btn.on('click', scoreAdder(p1Score, p1Display));
 	p2Btn.on('click', function() {
 		if (!gameOver) {
 			p2Score++;
