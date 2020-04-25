@@ -26,17 +26,7 @@ $(function() {
 		}
 	}
 
-	p1Btn.on('click', function() {
-		if (!gameOver) {
-			p1Score++;
-			p1Display = p1Display.text(p1Score);
-			if (p1Score === winningScore) {
-				p1Display.addClass('winner');
-				gameOver = !gameOver;
-				animatedBounce(p1Display);
-			}
-		}
-	});
+	p1Btn.on('click', scoreAdder(p1Score, p1Display));
 	p2Btn.on('click', function() {
 		if (!gameOver) {
 			p2Score++;
