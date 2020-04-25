@@ -56,6 +56,7 @@ $(function() {
 	// call scoreAdder.scoreReset here
 	resetBtn.on('click', function() {
 		reset();
+		// great, now you can make pScore be 0 now
 		scoreAdder.scoreReset();
 	});
 	numInput.on('change', function() {
