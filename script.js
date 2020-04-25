@@ -32,7 +32,7 @@ $(function() {
 		console.log(12);
 	}
 
-	p1Btn.on('click', xxx());
+	p1Btn.on('click', xxx);
 	p2Btn.on('click', function() {
 		if (!gameOver) {
 			p2Score++;
