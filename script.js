@@ -34,7 +34,7 @@ $(function() {
 			scoreAdder.scoreReset = scoreReset;
 		};
 	}
-	// bug...
+	// bug....
 	p1Btn.on('click', scoreAdder(p1Score, p1Display));
 	p2Btn.on('click', scoreAdder(p2Score, p2Display));
 	function animatedBounce(player) {
