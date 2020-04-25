@@ -19,6 +19,7 @@ $(function() {
 			pScore++;
 			pDisplay = pDisplay.text(pScore);
 			if (pScore === winningScore) {
+				console.log(123);
 				pDisplay.addClass('winner');
 				gameOver = !gameOver;
 				animatedBounce(pDisplay);
