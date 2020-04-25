@@ -53,6 +53,7 @@ $(function() {
 			gameOver = !gameOver;
 		}
 	}
+	// call scoreAdder.scoreReset here
 	resetBtn.on('click', function() {
 		reset();
 		scoreAdder.scoreReset();
