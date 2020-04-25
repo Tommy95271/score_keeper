@@ -35,7 +35,7 @@ $(function() {
 		$(player).addClass('animated flash');
 		$(con).addClass('appear');
 	}
-
+	// move reset into scoreAdder?
 	function reset() {
 		// console.log(p1Display, p2Display);
 
