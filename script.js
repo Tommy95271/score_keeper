@@ -26,7 +26,15 @@ $(function() {
 					animatedBounce(pDisplay);
 				}
 			}
+			scoreReset();
 		};
+		// create another reset function is scoreAdder
+		function scoreReset() {
+			pScore === 5 ? (pScore = 0) : 0;
+			// if (pScore === 5) {
+			// 	pScore = 0;
+			// }
+		}
 	}
 	// bug...
 	p1Btn.on('click', scoreAdder(p1Score, p1Display));
@@ -37,8 +45,6 @@ $(function() {
 	}
 	// move reset into scoreAdder?
 	function reset() {
-		// console.log(p1Display, p2Display);
-
 		p1Score = 0;
 		p2Score = 0;
 		p1Display.text(0);
