@@ -16,8 +16,7 @@ $(function() {
 
 	function scoreAdder(pScore, pDisplay) {
 		return function() {
-			console.log(p1Score);
-			console.log(p2Score);
+			console.log(pScore);
 			if (!gameOver) {
 				pScore++;
 				pDisplay = pDisplay.text(pScore);
@@ -31,24 +30,15 @@ $(function() {
 	}
 	// bug...
 	p1Btn.on('click', scoreAdder(p1Score, p1Display));
-	p2Btn.on('click', function() {
-		if (!gameOver) {
-			p2Score++;
-			p2Display = p2Display.text(p2Score);
-			if (p2Score === winningScore) {
-				p2Display.addClass('winner');
-				gameOver = !gameOver;
-				animatedBounce(p2Display);
-			}
-		}
-	});
+	p2Btn.on('click', scoreAdder(p2Score, p2Display));
 	function animatedBounce(player) {
 		$(player).addClass('animated flash');
 		$(con).addClass('appear');
 	}
 
 	function reset() {
-		console.log(p1Display, p2Display);
+		// console.log(p1Display, p2Display);
+
 		p1Score = 0;
 		p2Score = 0;
 		p1Display.text(0);
@@ -59,7 +49,6 @@ $(function() {
 		if (gameOver) {
 			gameOver = !gameOver;
 		}
-		// numInput.val('');
 	}
 	resetBtn.on('click', function() {
 		reset();
