@@ -1,3 +1,4 @@
+// new branch named test
 $(function() {
 	var p1Btn = $('#p1Btn');
 	var p2Btn = $('#p2Btn');
@@ -7,34 +8,27 @@ $(function() {
 	var p1Score = 0;
 	var p2Score = 0;
 	var p1Display = $('#p1Display');
-	var p2Display = $('#p1Display');
+	var p2Display = $('#p2Display');
 	var winningScore = 5;
 	var gameOver = false;
 	var con = $('.congratulation');
+	var main = $('#main');
 
 	function scoreAdder(pScore, pDisplay) {
-		if (!gameOver) {
-			pScore++;
-			pDisplay = pDisplay.text(pScore);
-			if (pScore === winningScore) {
-				pDisplay.addClass('winner');
-				gameOver = !gameOver;
-				animatedBounce(pDisplay);
+		return function() {
+			if (!gameOver) {
+				pScore++;
+				pDisplay = pDisplay.text(pScore);
+				if (pScore === winningScore) {
+					pDisplay.addClass('winner');
+					gameOver = !gameOver;
+					animatedBounce(pDisplay);
+				}
 			}
-		}
+		};
 	}
 
-	p1Btn.on('click', function() {
-		if (!gameOver) {
-			p1Score++;
-			p1Display = p1Display.text(p1Score);
-			if (p1Score === winningScore) {
-				p1Display.addClass('winner');
-				gameOver = !gameOver;
-				animatedBounce(p1Display);
-			}
-		}
-	});
+	p1Btn.on('click', scoreAdder(p1Score, p1Display));
 	p2Btn.on('click', function() {
 		if (!gameOver) {
 			p2Score++;
@@ -52,7 +46,6 @@ $(function() {
 	}
 
 	function reset() {
-		// console.log(p1Score, p2Score);
 		console.log(p1Display, p2Display);
 		p1Score = 0;
 		p2Score = 0;
